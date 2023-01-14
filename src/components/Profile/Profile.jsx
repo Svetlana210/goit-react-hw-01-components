@@ -31,8 +31,6 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
-export default Profile;
-
 Profile.defaultProps = {
   avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
 };
@@ -48,3 +46,5 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }),
 };
+
+export default Profile;
