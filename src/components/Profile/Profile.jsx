@@ -1,7 +1,13 @@
 import styles from './profile.module.css';
 import PropTypes from 'prop-types';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+  stats,
+}) => {
   return (
     <>
       <div className={styles.profile}>
@@ -29,10 +35,6 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       </div>
     </>
   );
-};
-
-Profile.defaultProps = {
-  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
 };
 
 Profile.propTypes = {
