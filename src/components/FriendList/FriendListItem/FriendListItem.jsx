@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from './friend-list-item.module.css';
 
-const FriendListItem = ({ avatar, name, isOnline }) => {
+const FriendListItem = ({
+  avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+  name,
+  isOnline,
+}) => {
   const status = isOnline ? styles.online : styles.offline;
   return (
     <li className={styles.item}>
@@ -17,9 +21,9 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
-FriendListItem.defaultProps = {
-  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-};
+// FriendListItem.defaultProps = {
+//   avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+// };
 
 FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
